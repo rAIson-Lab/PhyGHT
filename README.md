@@ -19,7 +19,7 @@ This code was developed and tested using the following environment configuration
 
 ## Dataset Preparation
 
-The dataset contains simulated particle collision events mimicking the HL-LHC environment, available for two pileup conditions: standard LHC pileup (mu=60) and extreme HL-LHC pileup (mu=200). Details on the dataset can be found in the paper and the associated Zenodo repository.
+The dataset contains simulated particle collision events mimicking the HL-LHC environment, available for two pileup conditions: standard LHC pileup (mu=60) and extreme HL-LHC pileup (mu=200). Details on the dataset can be found in the [paper](link here) and the associated [Zenodo repository](link here).
 
 ### 1. Download Raw Data
 
@@ -56,22 +56,22 @@ All global variables, model hyperparameters, and paths are managed centrally in 
 
 Key parameters that can be adjusted include:
 * `DATASET_NAME`: Switch between `"mu60_10k_events"` and `"mu200_10k_events"`.
-* `BATCH_SIZE`: Number of events per batch (default: 16).
-* `K_NEIGHBORS`: Number of edges for the spatial k-NN graph (default: 8).
-* `AUX_WEIGHT`: Controls the contribution of the auxiliary classification loss (default: 1.0).
-* `LEARNING_RATE`: Set the learning rate for the optimizer (default: 3e-4).
-* `OPTIMIZER`: The optimizer to use among sgd, adam, and adamw (default: adamw).
-* `NUM_EPOCHS`: Total number of training epochs (default: 200).
-* `NUM_HEADS`: Number of attention heads (default: 4).
-* `NUM_LAYERS`: Number of layers (default: 3).
-* `HIDDEN_DIM`: Hidden dimensions for the PhyGHT model (default: 128).
-* `DROPOUT`: Dropout rate (default: 0.1).
-* `EVAL_EVERY_N_EPOCHS`: Evaluate the model every N epochs (default: 1).
-* `DEBUG`: Set to True for quick debugging (default: False).
+* `BATCH_SIZE`: Number of events per batch (default: `16`).
+* `K_NEIGHBORS`: Number of edges for the spatial k-NN graph (default: `8`).
+* `AUX_WEIGHT`: Controls the contribution of the auxiliary classification loss (default: `0.1`).
+* `LEARNING_RATE`: Set the learning rate for the optimizer (default: `3e-4`).
+* `OPTIMIZER`: The optimizer to use among sgd, adam, and adamw (default: `adamw`).
+* `NUM_EPOCHS`: Total number of training epochs (default: `200`).
+* `NUM_HEADS`: Number of attention heads (default: `4`).
+* `NUM_LAYERS`: Number of layers (default: `3`).
+* `HIDDEN_DIM`: Hidden dimensions for the PhyGHT model (default: `128`).
+* `DROPOUT`: Dropout rate (default: `0.1`).
+* `EVAL_EVERY_N_EPOCHS`: Evaluate the model every N epochs (default: `1`).
+* `DEBUG`: Set to `True` for quick debugging (default: `False`).
 
 ## Training PhyGHT
 
-Once the data is preprocessed and configuration is set in `config.py`,` we can train the PhyGHT model by running:
+Once the data is preprocessed and configuration is set in `config.py`, we can train the PhyGHT model by running:
 
 ```python
 python train.py
