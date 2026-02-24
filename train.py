@@ -164,12 +164,7 @@ if __name__ == "__main__":
     os.makedirs(ckpt_dir, exist_ok=True)
     
     best_val_loss = float('inf')
-    best_efrac_r2 = float('-inf')
-    best_mfrac_r2 = float('-inf')
-    
     last_saved_loss_path = ""
-    last_saved_er2_path = ""
-    last_saved_mr2_path = ""
     
     train_losses, val_losses = [], []
     EPOCHS = CONFIG['NUM_EPOCHS']
@@ -206,11 +201,9 @@ if __name__ == "__main__":
     print("\n--- Running Final Evaluation on Best Models ---")
     full_report = {
         'Best Loss Model': {},
-        'Best Efrac R2 Model': {},
-        'Best Mfrac R2 Model': {}
     }
     
-    def eval_and_record(ckpt_path, label, plot_energy=False, plot_mass=False):
+    def eval_and_record(ckpt_path, label, plot_energy=True, plot_mass=True):
         """Loads best checkpoints, records metrics, and generates plots."""
         if not ckpt_path or not os.path.exists(ckpt_path):
             print(f"Skipping {label} (No checkpoint found)")
@@ -243,8 +236,6 @@ if __name__ == "__main__":
                 plot_residuals(y_true_m, y_pred_m, f"{split}_Mass", RUN_NAME, ARCH_DIR)
 
     eval_and_record(last_saved_loss_path, 'Best Loss Model')
-    eval_and_record(last_saved_er2_path, 'Best Efrac R2 Model', plot_energy=True)
-    eval_and_record(last_saved_mr2_path, 'Best Mfrac R2 Model', plot_mass=True)
 
     save_metrics_to_file(full_report, RUN_NAME, ARCH_DIR)
     print(f"\n--- EXPERIMENT COMPLETE: {RUN_NAME} ---")
