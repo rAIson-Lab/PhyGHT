@@ -19,12 +19,12 @@ This code was developed and tested using the following environment configuration
 
 ## Dataset Preparation
 
-The dataset contains simulated particle collision events mimicking the HL-LHC environment, available for two pileup conditions: standard LHC pileup (mu=60) and extreme HL-LHC pileup (mu=200). Details on the dataset can be found in the [paper](link here) and the associated [Zenodo repository](link here).
+The dataset contains simulated proton-proton collision events of top quark pair production ($t\bar{t}$) designed to mimic the High-Luminosity LHC (HL-LHC) environment. It includes samples with standard pileup ($\langle\mu\rangle=60$) and extreme pileup ($\langle\mu\rangle=200$). Details on the dataset can be found in the [paper](link here) and the associated [Zenodo repository](https://zenodo.org/records/18746388). A walkthrough of the dataset structure can be found [here](data/data_walkthrough.ipynb).
 
 ### 1. Download Raw Data
 
 Download the raw `.pkl` files from our Zenodo repository:
-* [Zenodo](link here)
+* [Zenodo](https://zenodo.org/records/18746388)
 
 Place the downloaded files into the `data/raw_data/` directory so the project structure looks like this:
 
