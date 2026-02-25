@@ -1,6 +1,6 @@
 # PhyGHT: Physics-Guided Hypergraph Transformer for Pileup Mitigation
 
-This repository contains the official PyTorch implementation of PhyGHT (Physics-Guided Hypergraph Transformer). The paper can be found here: [arXiv](link here).
+This repository contains the official PyTorch implementation of PhyGHT (Physics-Guided Hypergraph Transformer). The paper can be found here: [arXiv](https://arxiv.org/abs/2602.20475).
 
 ## Environment & Dependencies
 
@@ -19,7 +19,7 @@ This code was developed and tested using the following environment configuration
 
 ## Dataset Preparation
 
-The dataset contains simulated proton-proton collision events of top quark pair production ($t\bar{t}$) designed to mimic the High-Luminosity LHC (HL-LHC) environment. It includes samples with standard pileup ($\langle\mu\rangle=60$) and extreme pileup ($\langle\mu\rangle=200$). Details on the dataset can be found in the [paper](link here) and the associated [Zenodo repository](https://zenodo.org/records/18746388). A walkthrough of the dataset structure can be found [here](data/data_walkthrough.ipynb).
+The dataset contains simulated proton-proton collision events of top quark pair production ($t\bar{t}$) designed to mimic the High-Luminosity LHC (HL-LHC) environment. It includes samples with standard pileup ($\langle\mu\rangle=60$) and extreme pileup ($\langle\mu\rangle=200$). Details on the dataset can be found in the [paper](https://arxiv.org/abs/2602.20475) and the associated [Zenodo repository](https://zenodo.org/records/18746388). A walkthrough of the dataset structure can be found [here](data/data_walkthrough.ipynb).
 
 ### 1. Download Raw Data
 
@@ -90,5 +90,13 @@ During training, the pipeline automatically creates the following directories to
 If you find this code or dataset useful in your research, please consider citing our paper:
 
 ```bibtex
-
+@misc{rakib2026phyghtphysicsguidedhypergraphtransformer,
+      title={PhyGHT: Physics-Guided HyperGraph Transformer for Signal Purification at the HL-LHC}, 
+      author={Mohammed Rakib and Luke Vaughan and Shivang Patel and Flera Rizatdinova and Alexander Khanov and Atriya Sen},
+      year={2026},
+      eprint={2602.20475},
+      archivePrefix={arXiv},
+      primaryClass={hep-ex},
+      url={https://arxiv.org/abs/2602.20475}, 
+}
 ```
