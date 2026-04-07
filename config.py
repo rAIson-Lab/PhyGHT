@@ -28,7 +28,7 @@ for d in [PROCESSED_DATA_DIR, CHECKPOINT_DIR, METRICS_DIR, PLOTS_DIR]:
 
 # --- Dataset & Architecture ---
 DATASET_NAME = "mu60_10k_events"
-# DATASET_NAME = "mu60_200k_events"
+# DATASET_NAME = "mu200_10k_events"
 MODEL_ARCHITECTURE = "PhyGHT"
 
 # --- Hyperparameters ---
